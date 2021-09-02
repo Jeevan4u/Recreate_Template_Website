@@ -1,0 +1,344 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@1,300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Overpass:wght@300&display=swap');
+:root {
+    --main-bg-color: brown;
+    --Light-red: hsl(356, 100%, 66%);
+    --Very-light-red : hsl(355, 100%, 74%);
+    --Very-dark-blue: hsl(208, 49%, 24%);
+    --White: hsl(0, 0%, 100%);
+    --Grayish-blue: hsl(240, 2%, 79%);
+    --Very-dark-grayish-blue: hsl(207, 13%, 34%);
+    --Very-dark-black-blue : hsl(240, 10%, 16%);
+    --Very-dark-gray-blue: hsl(237, 17%, 21%);
+    --Very-dark-desaturated-blue: hsl(237, 23%, 32%);
+  }
+
+::before,::after,*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+::-webkit-scrollbar {
+    width: 5px;
+}
+::-webkit-scrollbar-track {
+    background: #9b59b6;
+}
+::-webkit-scrollbar-thumb {
+    background: #27ae5ffd;
+}
+::-webkit-scrollbar-thumb:hover {
+    background: #fdcb6e;
+    ;
+}
+body{
+    font-family: 'Montserrat', sans-serif;
+    
+}
+#loader{
+    text-align: center;
+    color: white;
+    width: 100%;
+    height: 100vh;
+    position: fixed;
+    background: #000 url(./images/preloader.gif) no-repeat center ;
+    z-index: 999;
+    
+}
+.btn.btn-outline-success.signup{
+    margin-right: 90px;
+}
+.btn.btn-outline-success.login{
+    margin-right: 10px;
+}
+.navbar-brand{
+    margin-left: 70px;
+    font-size:2rem ;
+}
+
+.nav-item.dropdown{
+    margin-top: 1rem;
+    margin-left: 2.5rem;
+}
+
+.main{
+    height: 100%;
+    background-image: url(images/bg-pattern-intro.svg); 
+    background-image: url(images/bg-pattern-intro.svg), linear-gradient(hsl(356, 100%, 66%),hsl(355, 100%, 74%));
+    background-position:top 50% left 35%;
+    background-size: 200%; 
+    border-bottom-left-radius: 8rem;
+}
+
+#navbarDropdown{
+    position: relative;
+    color: white;
+    font-weight: 300;
+}
+
+.btn.btn-outline-success.signup{
+    width: 7rem;
+    border-radius: 1.3rem;
+    background-color: white;
+    border: none;
+    color: var(--Very-light-red);
+    font-weight: 600;
+}
+
+.btn.btn-outline-success.signup:hover{
+    background-color: var(--Light-red);
+    color: white;
+}
+
+.btn.btn-outline-success.login{
+    border: none;
+    color: white;
+    font-weight: 600;
+    position: relative;
+}
+.btn.btn-outline-success.login:hover{
+    background-color: transparent;
+}
+
+.btn.btn-outline-success.login::before{
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 2px;
+    background-color: white;
+    transform:scaleX(0);
+    transition: transform 300ms ease-in-out;
+
+}
+
+.btn.btn-outline-success.login:hover::before{
+    transform: scaleX(1);
+}
+.dropdown-menu{
+    border-radius: 7px;
+}
+
+#navbarDropdown::before{
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 2px;
+    background-color: white;
+    transform:scaleX(0);
+    transition: transform 300ms ease-in-out;
+}
+
+#navbarDropdown:hover::before,
+#navbarDropdown:focus::before{
+    transform: scaleX(1);
+}
+
+.secondary{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.secondary_buttons{
+    padding-bottom: 10rem;
+    display: flex;
+    margin-top: 2rem;
+    align-items: center;
+    justify-content: center;
+}
+.secondary h1{
+    font-weight: 600;
+    color: white;
+    margin-top: 5rem;
+}
+.secondary p{
+    font-weight: 400;
+    color: white;
+    margin-top: 1rem;
+}
+
+.secondary_buttons .btn.login,.btn.Signup{
+    border: 1px solid white;
+    
+    border-radius: 1.3rem;
+    width: 11rem;
+    font-weight: 600;
+}
+
+.secondary_buttons .btn.login{
+    margin-right: 1rem;
+    background: white;
+    color: var(--Very-light-red);
+}
+
+.secondary_buttons .btn.login:hover{
+    background-color: var(--Light-red);
+    color: white;
+    border: none;
+}
+
+.btn.Signup{
+    color: white;
+}
+
+.btn.Signup:hover{
+    background-color: white;
+    color: var(--Very-light-red);
+}
+.new{
+    overflow: hidden;
+   
+}
+.new h1{
+    font-family: 'Overpass', sans-serif;
+    font-weight:  600;
+    font-size: 2rem;
+    text-align: center;
+    margin-top: 5rem;
+}
+
+.container-fluid{
+    position: relative;
+}
+.col-lg-6.vector{
+    position: absolute;
+    background-image: url(./images/illustration-editor-desktop.svg);
+    background-repeat: no-repeat;
+    background-size: 100%;
+    height: 100vh;
+    left: 60%;
+    top: -10%;
+    /* overflow-y: hidden; */
+}
+.col-lg-6.mg > h1,p{
+    font-size: 1.5rem;
+    text-align: start;
+    margin-left: 5rem;
+    margin-bottom: 5rem;
+}
+
+.container-fluid.last{
+    position: relative;
+    color: white;
+    font-weight: bold;
+    margin-top: 5rem;
+    height: 100%;
+    background-color: var(--Very-dark-desaturated-blue);
+    border-bottom-left-radius: 8rem;
+    border-top-right-radius: 8rem;
+    overflow: hidden;
+    
+}
+
+.container-fluid.last  h1{
+    margin-top: 3rem;
+    margin-bottom: 5rem;
+}
+
+.container-fluid.last  p{
+    margin-bottom: 5rem;
+
+}
+
+.whole{
+    position: relative;
+}
+.phones{
+    position: absolute;
+    z-index: 10;
+    top: -3.5rem;
+    left: 2rem;
+}
+.col-6.circle{
+    position: absolute;
+    top: -20rem;
+    left: -20rem;
+   
+}
+
+.col-6.margeen{
+   position: relative;
+   left: 45rem;
+}
+.col-6.margeen > h1{
+    text-align: center;
+    
+}
+
+.free{
+    margin-top: 10rem;
+}
+.free h1{
+  
+  font-family: 'Overpass', sans-serif;
+  font-weight:  600;
+  font-size: 2rem;
+  text-align: center;
+  margin-top: 5rem;
+}
+
+.free p{
+    font-family: 'Overpass', sans-serif;
+}
+
+
+.col-lg-6.laptop{
+   position: relative;
+}
+
+.col-lg-6.laptop .pos{
+    position: absolute;
+    left: -17rem;
+    top: -5rem;
+}
+
+.footer{
+    display: flex;
+    background-color: var(--Very-dark-gray-blue) ;
+    /* height: 30vh; */
+    border-top-right-radius: 8rem;
+    
+}
+
+.logo{
+    margin-top: 10rem;
+    margin-left: 5rem;
+    margin-right: 5rem;
+    margin-bottom: 10rem;
+}
+
+.contents{
+    display: flex;
+    width: 100%;
+    align-items: center;
+    justify-content: space-around;
+    
+
+}
+
+
+.products .product1{
+    margin-top: 5rem;
+    color: white;
+    font-size: 1.5rem;
+    text-decoration: none;
+    padding-left: 1.7rem;
+   
+}
+
+.products .list_items{
+    list-style: none;
+}
+
+.products .list_items .links{
+    letter-spacing: 0.2rem;
+    color: white;
+    text-decoration: none;
+    font-size: 1rem;
+}
